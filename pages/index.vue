@@ -24,19 +24,16 @@
 </template>
 
 <script>
-import DatePicker from "vue2-datepicker";
 import Vue from "vue";
 import Date from "./Date.vue";
-import "vue2-datepicker/index.css";
 
 export default Vue.extend({
   name: "Index",
-  components: { DatePicker, Date },
+  components: { Date },
   data() {
     return {
       myName: "",
       date: null,
-      endDate: new Date(),
     };
   },
   methods: {
@@ -47,19 +44,6 @@ export default Vue.extend({
     neerajdis(date) {
       return date > new Date();
     },
-    selectNextThreeDay(emit) {
-      const start = new Date();
-      const end = new Date();
-      end.setTime(end.getTime() + 3 * 24 * 3600 * 1000);
-      const date = [start, end];
-      emit(date);
-    },
   },
 });
 </script>
-
-<style>
-.margin {
-  margin: 250px;
-}
-</style>
