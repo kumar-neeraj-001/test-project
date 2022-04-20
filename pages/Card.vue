@@ -36,7 +36,6 @@
     <h1 class="text-2xl">
       {{ windowWidth }}
     </h1>
-    <h1>Fourth</h1>
   </div>
 </template>
 
